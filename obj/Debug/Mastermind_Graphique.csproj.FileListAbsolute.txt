@@ -1,0 +1,12 @@
+D:\programation\masterMindGraphique\Mastermind_Graphique\bin\Debug\Mastermind_Graphique.exe.config
+D:\programation\masterMindGraphique\Mastermind_Graphique\bin\Debug\Mastermind_Graphique.exe
+D:\programation\masterMindGraphique\Mastermind_Graphique\bin\Debug\Mastermind_Graphique.pdb
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.csproj.AssemblyReference.cache
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.csproj.SuggestedBindingRedirects.cache
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.Properties.Resources.resources
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.csproj.GenerateResource.cache
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.csproj.CoreCompileInputs.cache
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.exe
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.pdb
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.MastermindNormal.resources
+D:\programation\masterMindGraphique\Mastermind_Graphique\obj\Debug\Mastermind_Graphique.Home.resources
