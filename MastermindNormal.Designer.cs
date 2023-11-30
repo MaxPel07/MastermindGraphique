@@ -41,16 +41,13 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnSolution = new System.Windows.Forms.Button();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lbl4 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
+            this.panelEssaie = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnPurple
             // 
             this.btnPurple.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnPurple.Location = new System.Drawing.Point(329, 534);
+            this.btnPurple.Location = new System.Drawing.Point(351, 534);
             this.btnPurple.Name = "btnPurple";
             this.btnPurple.Size = new System.Drawing.Size(75, 30);
             this.btnPurple.TabIndex = 0;
@@ -60,7 +57,7 @@
             // btnOrange
             // 
             this.btnOrange.BackColor = System.Drawing.Color.Orange;
-            this.btnOrange.Location = new System.Drawing.Point(329, 498);
+            this.btnOrange.Location = new System.Drawing.Point(351, 498);
             this.btnOrange.Name = "btnOrange";
             this.btnOrange.Size = new System.Drawing.Size(75, 30);
             this.btnOrange.TabIndex = 1;
@@ -70,7 +67,7 @@
             // btnMagenta
             // 
             this.btnMagenta.BackColor = System.Drawing.Color.Magenta;
-            this.btnMagenta.Location = new System.Drawing.Point(329, 462);
+            this.btnMagenta.Location = new System.Drawing.Point(351, 462);
             this.btnMagenta.Name = "btnMagenta";
             this.btnMagenta.Size = new System.Drawing.Size(75, 30);
             this.btnMagenta.TabIndex = 2;
@@ -80,7 +77,7 @@
             // btnYellow
             // 
             this.btnYellow.BackColor = System.Drawing.Color.Yellow;
-            this.btnYellow.Location = new System.Drawing.Point(329, 426);
+            this.btnYellow.Location = new System.Drawing.Point(351, 426);
             this.btnYellow.Name = "btnYellow";
             this.btnYellow.Size = new System.Drawing.Size(75, 30);
             this.btnYellow.TabIndex = 3;
@@ -90,7 +87,7 @@
             // btnBlue
             // 
             this.btnBlue.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnBlue.Location = new System.Drawing.Point(329, 390);
+            this.btnBlue.Location = new System.Drawing.Point(351, 390);
             this.btnBlue.Name = "btnBlue";
             this.btnBlue.Size = new System.Drawing.Size(75, 30);
             this.btnBlue.TabIndex = 4;
@@ -100,7 +97,7 @@
             // btnGreen
             // 
             this.btnGreen.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnGreen.Location = new System.Drawing.Point(329, 354);
+            this.btnGreen.Location = new System.Drawing.Point(351, 354);
             this.btnGreen.Name = "btnGreen";
             this.btnGreen.Size = new System.Drawing.Size(75, 30);
             this.btnGreen.TabIndex = 5;
@@ -110,7 +107,7 @@
             // btnRed
             // 
             this.btnRed.BackColor = System.Drawing.Color.Red;
-            this.btnRed.Location = new System.Drawing.Point(329, 318);
+            this.btnRed.Location = new System.Drawing.Point(351, 318);
             this.btnRed.Name = "btnRed";
             this.btnRed.Size = new System.Drawing.Size(75, 30);
             this.btnRed.TabIndex = 6;
@@ -119,7 +116,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(329, 30);
+            this.btnExit.Location = new System.Drawing.Point(351, 30);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 34);
             this.btnExit.TabIndex = 7;
@@ -129,7 +126,7 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(329, 82);
+            this.btnNewGame.Location = new System.Drawing.Point(351, 82);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(75, 34);
             this.btnNewGame.TabIndex = 8;
@@ -157,59 +154,27 @@
             // 
             // btnSolution
             // 
-            this.btnSolution.Location = new System.Drawing.Point(329, 132);
+            this.btnSolution.Location = new System.Drawing.Point(351, 132);
             this.btnSolution.Name = "btnSolution";
             this.btnSolution.Size = new System.Drawing.Size(75, 23);
             this.btnSolution.TabIndex = 12;
             this.btnSolution.Text = "solution";
             this.btnSolution.UseVisualStyleBackColor = true;
             // 
-            // lbl1
+            // panelEssaie
             // 
-            this.lbl1.BackColor = System.Drawing.Color.White;
-            this.lbl1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl1.Location = new System.Drawing.Point(6, 30);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(47, 49);
-            this.lbl1.TabIndex = 13;
-            // 
-            // lbl4
-            // 
-            this.lbl4.BackColor = System.Drawing.Color.White;
-            this.lbl4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl4.Location = new System.Drawing.Point(201, 30);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(47, 49);
-            this.lbl4.TabIndex = 17;
-            // 
-            // lbl3
-            // 
-            this.lbl3.BackColor = System.Drawing.Color.White;
-            this.lbl3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl3.Location = new System.Drawing.Point(135, 30);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(47, 49);
-            this.lbl3.TabIndex = 18;
-            // 
-            // lbl2
-            // 
-            this.lbl2.BackColor = System.Drawing.Color.White;
-            this.lbl2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl2.Location = new System.Drawing.Point(68, 30);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(47, 49);
-            this.lbl2.TabIndex = 19;
+            this.panelEssaie.Location = new System.Drawing.Point(28, 30);
+            this.panelEssaie.Name = "panelEssaie";
+            this.panelEssaie.Size = new System.Drawing.Size(235, 462);
+            this.panelEssaie.TabIndex = 13;
             // 
             // MastermindNormal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(423, 583);
-            this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.lbl3);
-            this.Controls.Add(this.lbl4);
-            this.Controls.Add(this.lbl1);
+            this.ClientSize = new System.Drawing.Size(462, 583);
+            this.Controls.Add(this.panelEssaie);
             this.Controls.Add(this.btnSolution);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnClear);
@@ -228,6 +193,7 @@
             this.Name = "MastermindNormal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MasterMind - Normal";
+            this.Load += new System.EventHandler(this.MastermindNormal_Load);
             this.ResumeLayout(false);
 
         }
@@ -246,10 +212,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnSolution;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.Label lbl3;
-        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Panel panelEssaie;
     }
 }
 

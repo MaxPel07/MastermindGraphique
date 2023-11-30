@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// ETML
+/// Auteur      : Maxime Pelloquin
+/// Date        : 16.11.2023
+/// Descritpion :
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +14,11 @@ using System.Windows.Forms;
 
 namespace Mastermind_Graphique
 {
-
-    
-
-
     public partial class MastermindNormal : System.Windows.Forms.Form
     {
+        Label[,] tableauLabel;
+
+
         // conteur couleur
         int conteurCouleur = 0;
         public MastermindNormal()
@@ -42,22 +45,22 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.Red;
+                //lbl1.BackColor = Color.Red;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.Red;
+                //lbl2.BackColor = Color.Red;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.Red;
+                //lbl3.BackColor = Color.Red;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.Red;
+                //lbl4.BackColor = Color.Red;
             }
 
             conteurCouleur++;
@@ -67,22 +70,22 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.Chartreuse;
+                //lbl1.BackColor = Color.Chartreuse;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.Chartreuse;
+                // lbl2.BackColor = Color.Chartreuse;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.Chartreuse;
+                //lbl3.BackColor = Color.Chartreuse;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.Chartreuse;
+                // lbl4.BackColor = Color.Chartreuse;
             }
 
             conteurCouleur++;
@@ -92,22 +95,22 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.DarkTurquoise;
+                // lbl1.BackColor = Color.DarkTurquoise;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.DarkTurquoise;
+                // lbl2.BackColor = Color.DarkTurquoise;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.DarkTurquoise;
+                // lbl3.BackColor = Color.DarkTurquoise;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.DarkTurquoise;
+                // lbl4.BackColor = Color.DarkTurquoise;
             }
 
             conteurCouleur++;
@@ -117,22 +120,22 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.Yellow;
+                // lbl1.BackColor = Color.Yellow;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.Yellow;
+                // lbl2.BackColor = Color.Yellow;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.Yellow;
+                // lbl3.BackColor = Color.Yellow;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.Yellow;
+                // lbl4.BackColor = Color.Yellow;
             }
 
             conteurCouleur++;
@@ -142,22 +145,22 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.Magenta;
+                //lbl1.BackColor = Color.Magenta;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.Magenta;
+                // lbl2.BackColor = Color.Magenta;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.Magenta;
+                // lbl3.BackColor = Color.Magenta;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.Magenta;
+                //lbl4.BackColor = Color.Magenta;
             }
 
             conteurCouleur++;
@@ -167,22 +170,22 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.Orange;
+                //  lbl1.BackColor = Color.Orange;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.Orange;
+                // lbl2.BackColor = Color.Orange;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.Orange;
+                // lbl3.BackColor = Color.Orange;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.Orange;
+                // lbl4.BackColor = Color.Orange;
             }
 
             conteurCouleur++;
@@ -192,25 +195,55 @@ namespace Mastermind_Graphique
         {
             if (conteurCouleur == 0)
             {
-                lbl1.BackColor = Color.Purple;
+                // lbl1.BackColor = Color.Purple;
             }
 
             if (conteurCouleur == 1)
             {
-                lbl2.BackColor = Color.Purple;
+                // lbl2.BackColor = Color.Purple;
             }
 
             if (conteurCouleur == 2)
             {
-                lbl3.BackColor = Color.Purple;
+                // lbl3.BackColor = Color.Purple;
             }
 
             if (conteurCouleur == 3)
             {
-                lbl4.BackColor = Color.Purple;
+                // lbl4.BackColor = Color.Purple;
             }
 
             conteurCouleur++;
         }
+
+        private void MastermindNormal_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {   
+            // création d'un tableau de label
+            tableauLabel = new Label[10, 4];
+
+            for (int ligne = 0; ligne < 10; ligne++)
+            {
+                for (int colonne = 0; colonne < 4; colonne++)
+                {
+                    // création d'un label
+                    Label newLabel = new Label();
+
+                    // placement du label dans le tableau
+                    tableauLabel[ligne, colonne] = newLabel;
+                    panelEssaie;
+
+
+
+                    // Ajout du label au Panel
+                    panelEssaie.Controls.Add(newLabel);
+                }
+            }
+        }
+
     }
 }
