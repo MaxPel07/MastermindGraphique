@@ -24,9 +24,9 @@ namespace Mastermind_Graphique
 
         private void btnModeNormal_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form MastermindNormal = new MastermindNormal();
             MastermindNormal.Show();
+            this.Hide();
         }
     }
 }

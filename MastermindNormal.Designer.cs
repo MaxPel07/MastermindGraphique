@@ -40,14 +40,15 @@
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnSolution = new System.Windows.Forms.Button();
             this.panelEssaie = new System.Windows.Forms.Panel();
+            this.panelIndice = new System.Windows.Forms.Panel();
+            this.chkSolution = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnPurple
             // 
             this.btnPurple.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnPurple.Location = new System.Drawing.Point(351, 534);
+            this.btnPurple.Location = new System.Drawing.Point(339, 534);
             this.btnPurple.Name = "btnPurple";
             this.btnPurple.Size = new System.Drawing.Size(75, 30);
             this.btnPurple.TabIndex = 0;
@@ -57,7 +58,7 @@
             // btnOrange
             // 
             this.btnOrange.BackColor = System.Drawing.Color.Orange;
-            this.btnOrange.Location = new System.Drawing.Point(351, 498);
+            this.btnOrange.Location = new System.Drawing.Point(339, 498);
             this.btnOrange.Name = "btnOrange";
             this.btnOrange.Size = new System.Drawing.Size(75, 30);
             this.btnOrange.TabIndex = 1;
@@ -67,7 +68,7 @@
             // btnMagenta
             // 
             this.btnMagenta.BackColor = System.Drawing.Color.Magenta;
-            this.btnMagenta.Location = new System.Drawing.Point(351, 462);
+            this.btnMagenta.Location = new System.Drawing.Point(339, 462);
             this.btnMagenta.Name = "btnMagenta";
             this.btnMagenta.Size = new System.Drawing.Size(75, 30);
             this.btnMagenta.TabIndex = 2;
@@ -77,7 +78,7 @@
             // btnYellow
             // 
             this.btnYellow.BackColor = System.Drawing.Color.Yellow;
-            this.btnYellow.Location = new System.Drawing.Point(351, 426);
+            this.btnYellow.Location = new System.Drawing.Point(339, 426);
             this.btnYellow.Name = "btnYellow";
             this.btnYellow.Size = new System.Drawing.Size(75, 30);
             this.btnYellow.TabIndex = 3;
@@ -87,7 +88,7 @@
             // btnBlue
             // 
             this.btnBlue.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnBlue.Location = new System.Drawing.Point(351, 390);
+            this.btnBlue.Location = new System.Drawing.Point(339, 390);
             this.btnBlue.Name = "btnBlue";
             this.btnBlue.Size = new System.Drawing.Size(75, 30);
             this.btnBlue.TabIndex = 4;
@@ -97,7 +98,7 @@
             // btnGreen
             // 
             this.btnGreen.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnGreen.Location = new System.Drawing.Point(351, 354);
+            this.btnGreen.Location = new System.Drawing.Point(339, 354);
             this.btnGreen.Name = "btnGreen";
             this.btnGreen.Size = new System.Drawing.Size(75, 30);
             this.btnGreen.TabIndex = 5;
@@ -107,7 +108,7 @@
             // btnRed
             // 
             this.btnRed.BackColor = System.Drawing.Color.Red;
-            this.btnRed.Location = new System.Drawing.Point(351, 318);
+            this.btnRed.Location = new System.Drawing.Point(339, 318);
             this.btnRed.Name = "btnRed";
             this.btnRed.Size = new System.Drawing.Size(75, 30);
             this.btnRed.TabIndex = 6;
@@ -116,7 +117,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(351, 30);
+            this.btnExit.Location = new System.Drawing.Point(339, 30);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 34);
             this.btnExit.TabIndex = 7;
@@ -126,7 +127,7 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(351, 82);
+            this.btnNewGame.Location = new System.Drawing.Point(339, 82);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(75, 34);
             this.btnNewGame.TabIndex = 8;
@@ -152,30 +153,42 @@
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
             // 
-            // btnSolution
-            // 
-            this.btnSolution.Location = new System.Drawing.Point(351, 132);
-            this.btnSolution.Name = "btnSolution";
-            this.btnSolution.Size = new System.Drawing.Size(75, 23);
-            this.btnSolution.TabIndex = 12;
-            this.btnSolution.Text = "solution";
-            this.btnSolution.UseVisualStyleBackColor = true;
-            // 
             // panelEssaie
             // 
             this.panelEssaie.Location = new System.Drawing.Point(28, 30);
             this.panelEssaie.Name = "panelEssaie";
-            this.panelEssaie.Size = new System.Drawing.Size(235, 462);
+            this.panelEssaie.Size = new System.Drawing.Size(201, 462);
             this.panelEssaie.TabIndex = 13;
+            // 
+            // panelIndice
+            // 
+            this.panelIndice.Location = new System.Drawing.Point(235, 30);
+            this.panelIndice.Name = "panelIndice";
+            this.panelIndice.Size = new System.Drawing.Size(76, 462);
+            this.panelIndice.TabIndex = 0;
+            // 
+            // chkSolution
+            // 
+            this.chkSolution.AutoSize = true;
+            this.chkSolution.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.chkSolution.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkSolution.Location = new System.Drawing.Point(339, 134);
+            this.chkSolution.Name = "chkSolution";
+            this.chkSolution.Size = new System.Drawing.Size(74, 20);
+            this.chkSolution.TabIndex = 14;
+            this.chkSolution.Text = "Solution";
+            this.chkSolution.UseVisualStyleBackColor = true;
+            this.chkSolution.CheckedChanged += new System.EventHandler(this.chkSolution_CheckedChanged);
             // 
             // MastermindNormal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(462, 583);
+            this.ClientSize = new System.Drawing.Size(443, 583);
+            this.Controls.Add(this.chkSolution);
+            this.Controls.Add(this.panelIndice);
             this.Controls.Add(this.panelEssaie);
-            this.Controls.Add(this.btnSolution);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnNewGame);
@@ -195,6 +208,7 @@
             this.Text = "MasterMind - Normal";
             this.Load += new System.EventHandler(this.MastermindNormal_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -211,8 +225,9 @@
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button btnSolution;
         private System.Windows.Forms.Panel panelEssaie;
+        private System.Windows.Forms.Panel panelIndice;
+        private System.Windows.Forms.CheckBox chkSolution;
     }
 }
 
