@@ -43,6 +43,7 @@
             this.panelEssaie = new System.Windows.Forms.Panel();
             this.panelIndice = new System.Windows.Forms.Panel();
             this.chkSolution = new System.Windows.Forms.CheckBox();
+            this.panelSolution = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnPurple
@@ -180,12 +181,20 @@
             this.chkSolution.UseVisualStyleBackColor = true;
             this.chkSolution.CheckedChanged += new System.EventHandler(this.chkSolution_CheckedChanged);
             // 
+            // panelSolution
+            // 
+            this.panelSolution.Location = new System.Drawing.Point(336, 156);
+            this.panelSolution.Name = "panelSolution";
+            this.panelSolution.Size = new System.Drawing.Size(78, 26);
+            this.panelSolution.TabIndex = 15;
+            // 
             // MastermindNormal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(443, 583);
+            this.Controls.Add(this.panelSolution);
             this.Controls.Add(this.chkSolution);
             this.Controls.Add(this.panelIndice);
             this.Controls.Add(this.panelEssaie);
@@ -228,6 +237,7 @@
         private System.Windows.Forms.Panel panelEssaie;
         private System.Windows.Forms.Panel panelIndice;
         private System.Windows.Forms.CheckBox chkSolution;
+        private System.Windows.Forms.Panel panelSolution;
     }
 }
 

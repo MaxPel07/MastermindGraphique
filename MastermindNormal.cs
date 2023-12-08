@@ -17,8 +17,9 @@ namespace Mastermind_Graphique
     public partial class MastermindNormal : System.Windows.Forms.Form
     {
         Label[,] tableauLabel;
-
-
+        Label[,] tableauLabelIndice;
+        Label[] tableauLabelSolution;
+        Color[] goal = new Color[nbCouleurMaxParEssaie];
         // conteur couleur
         int conteurCouleur = 0;
 
@@ -282,7 +283,7 @@ namespace Mastermind_Graphique
         private void CreationLabelIndice(Panel panel)
         {
             // création d'un tableau de label
-            tableauLabel = new Label[4, 10];
+            tableauLabelIndice = new Label[4, 10];
 
             for (int colonne = 0; colonne < 4; colonne++)
             {
@@ -308,7 +309,7 @@ namespace Mastermind_Graphique
 
         private Color[] NouvelleCombinaisonAléatoire()
         {
-            Color[] goal = new Color[nbCouleurMaxParEssaie];
+            
             Random random = new Random();
 
             // Génération d'une combinaison aléatoire de 4 couleurs
@@ -350,10 +351,26 @@ namespace Mastermind_Graphique
 
         private void chkSolution_CheckedChanged(object sender, EventArgs e)
         {
-            /*
-                POUR LA PROCHAINE FOIS : 1. créer le tableau de label sous la checkbox pour afficher la solution
-                                         2. Changer la couleur de fond des labels pour voir la solution
-            */
+            goal = NouvelleCombinaisonAléatoire();
+
+            tableauLabelSolution = new Label[4];
+
+            for (int ligne = 0; ligne < 4; ligne++)
+            {
+                // création d'un label
+                Label newLabel = new Label();
+
+                // placement du label dans le tableau
+                tableauLabelSolution[ligne] = newLabel;
+
+                // paramètre label
+                newLabel.BackColor = goal[ligne];
+                newLabel.Size = new Size(15, 15);
+                newLabel.Location = new Point(20 * ligne + 0);
+
+                // Ajout du label au Panel
+                panelSolution.Controls.Add(newLabel);
+            }
         }
     }
 }
