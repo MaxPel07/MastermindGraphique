@@ -54,7 +54,7 @@
             this.btnPurple.Size = new System.Drawing.Size(75, 30);
             this.btnPurple.TabIndex = 0;
             this.btnPurple.UseVisualStyleBackColor = false;
-            this.btnPurple.Click += new System.EventHandler(this.btnPurple_Click);
+            this.btnPurple.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnOrange
             // 
@@ -64,7 +64,7 @@
             this.btnOrange.Size = new System.Drawing.Size(75, 30);
             this.btnOrange.TabIndex = 1;
             this.btnOrange.UseVisualStyleBackColor = false;
-            this.btnOrange.Click += new System.EventHandler(this.btnOrange_Click);
+            this.btnOrange.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnMagenta
             // 
@@ -74,7 +74,7 @@
             this.btnMagenta.Size = new System.Drawing.Size(75, 30);
             this.btnMagenta.TabIndex = 2;
             this.btnMagenta.UseVisualStyleBackColor = false;
-            this.btnMagenta.Click += new System.EventHandler(this.btnMagenta_Click);
+            this.btnMagenta.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnYellow
             // 
@@ -84,7 +84,7 @@
             this.btnYellow.Size = new System.Drawing.Size(75, 30);
             this.btnYellow.TabIndex = 3;
             this.btnYellow.UseVisualStyleBackColor = false;
-            this.btnYellow.Click += new System.EventHandler(this.btnYellow_Click);
+            this.btnYellow.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnBlue
             // 
@@ -94,7 +94,7 @@
             this.btnBlue.Size = new System.Drawing.Size(75, 30);
             this.btnBlue.TabIndex = 4;
             this.btnBlue.UseVisualStyleBackColor = false;
-            this.btnBlue.Click += new System.EventHandler(this.btnBlue_Click);
+            this.btnBlue.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnGreen
             // 
@@ -104,7 +104,7 @@
             this.btnGreen.Size = new System.Drawing.Size(75, 30);
             this.btnGreen.TabIndex = 5;
             this.btnGreen.UseVisualStyleBackColor = false;
-            this.btnGreen.Click += new System.EventHandler(this.btnGreen_Click);
+            this.btnGreen.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnRed
             // 
@@ -114,7 +114,7 @@
             this.btnRed.Size = new System.Drawing.Size(75, 30);
             this.btnRed.TabIndex = 6;
             this.btnRed.UseVisualStyleBackColor = false;
-            this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
+            this.btnRed.Click += new System.EventHandler(this.ColorBouton_Click);
             // 
             // btnExit
             // 
@@ -144,6 +144,7 @@
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnConfirm
             // 
@@ -153,6 +154,7 @@
             this.btnConfirm.TabIndex = 10;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // panelEssaie
             // 

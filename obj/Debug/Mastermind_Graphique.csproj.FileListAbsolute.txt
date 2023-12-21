@@ -55,3 +55,4 @@ E:\programation\masterMindGraphique\MastermindGraphiqueDerniereVersion\obj\Debug
 E:\programation\masterMindGraphique\MastermindGraphiqueDerniereVersion\obj\Debug\Mastermind_Graphique.csproj.CoreCompileInputs.cache
 E:\programation\masterMindGraphique\MastermindGraphiqueDerniereVersion\obj\Debug\Mastermind_Graphique.exe
 E:\programation\masterMindGraphique\MastermindGraphiqueDerniereVersion\obj\Debug\Mastermind_Graphique.pdb
+D:\programation\masterMindGraphique\MastermindGraphiqueDerniereVersion\obj\Debug\Mastermind_Graphique.csproj.SuggestedBindingRedirects.cache

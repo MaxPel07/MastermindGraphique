@@ -17,11 +17,20 @@ namespace Mastermind_Graphique
     public partial class MastermindNormal : System.Windows.Forms.Form
     {
         Label[,] tableauLabel;
+        Label[,] copieTableauLabel = new Label[LIGNES,COLONES];
+        Label[,] choixUtilisateur = new Label[LIGNES,COLONES];
         Label[,] tableauLabelIndice;
         Label[] tableauLabelSolution;
         Color[] goal = new Color[nbCouleurMaxParEssaie];
-        // conteur couleur
+        Color[] copieGoal = new Color[nbCouleurMaxParEssaie];
+
+        const int COLONES = 4;
+        const int LIGNES = 10;
         int conteurCouleur = 0;
+        int conteurEssaie = 0;
+        int positionY = 0;
+        int bonnePosition = 0;
+        int mauvaisePosition = 0;
 
         public const int nbCouleurMaxParEssaie = 4;
         public MastermindNormal()
@@ -29,12 +38,22 @@ namespace Mastermind_Graphique
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Permet de Fermer le programme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             // Ferme le programme
             Application.Exit();
         }
 
+        /// <summary>
+        /// Ferme le jeu et ouvre le menu du jeu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNewGame_Click(object sender, EventArgs e)
         {   
             // ouvre une nouvelle fois l'application
@@ -44,186 +63,31 @@ namespace Mastermind_Graphique
             this.Close();
         }
 
-        private void btnRed_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Ajoute les couleur des boutons cliqué dans le tableau de label des essaies du joueur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ColorBouton_Click(object sender, EventArgs e)
         {
-            if (conteurCouleur == 0)
-            {
-                //lbl1.BackColor = Color.Red;
-            }
+            Button colorBouton = (Button)sender;
+            tableauLabel[conteurCouleur, positionY].BackColor = colorBouton.BackColor;
 
-            if (conteurCouleur == 1)
-            {
-                //lbl2.BackColor = Color.Red;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                //lbl3.BackColor = Color.Red;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                //lbl4.BackColor = Color.Red;
-            }
-
+            
             conteurCouleur++;
         }
 
-        private void btnGreen_Click(object sender, EventArgs e)
-        {
-            if (conteurCouleur == 0)
-            {
-                //lbl1.BackColor = Color.Chartreuse;
-            }
-
-            if (conteurCouleur == 1)
-            {
-                // lbl2.BackColor = Color.Chartreuse;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                //lbl3.BackColor = Color.Chartreuse;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                // lbl4.BackColor = Color.Chartreuse;
-            }
-
-            conteurCouleur++;
-        }
-
-        private void btnBlue_Click(object sender, EventArgs e)
-        {
-            if (conteurCouleur == 0)
-            {
-                // lbl1.BackColor = Color.DarkTurquoise;
-            }
-
-            if (conteurCouleur == 1)
-            {
-                // lbl2.BackColor = Color.DarkTurquoise;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                // lbl3.BackColor = Color.DarkTurquoise;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                // lbl4.BackColor = Color.DarkTurquoise;
-            }
-
-            conteurCouleur++;
-        }
-
-        private void btnYellow_Click(object sender, EventArgs e)
-        {
-            if (conteurCouleur == 0)
-            {
-                // lbl1.BackColor = Color.Yellow;
-            }
-
-            if (conteurCouleur == 1)
-            {
-                // lbl2.BackColor = Color.Yellow;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                // lbl3.BackColor = Color.Yellow;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                // lbl4.BackColor = Color.Yellow;
-            }
-
-            conteurCouleur++;
-        }
-
-        private void btnMagenta_Click(object sender, EventArgs e)
-        {
-            if (conteurCouleur == 0)
-            {
-                //lbl1.BackColor = Color.Magenta;
-            }
-
-            if (conteurCouleur == 1)
-            {
-                // lbl2.BackColor = Color.Magenta;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                // lbl3.BackColor = Color.Magenta;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                //lbl4.BackColor = Color.Magenta;
-            }
-
-            conteurCouleur++;
-        }
-
-        private void btnOrange_Click(object sender, EventArgs e)
-        {
-            if (conteurCouleur == 0)
-            {
-                //  lbl1.BackColor = Color.Orange;
-            }
-
-            if (conteurCouleur == 1)
-            {
-                // lbl2.BackColor = Color.Orange;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                // lbl3.BackColor = Color.Orange;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                // lbl4.BackColor = Color.Orange;
-            }
-
-            conteurCouleur++;
-        }
-
-        private void btnPurple_Click(object sender, EventArgs e)
-        {
-            if (conteurCouleur == 0)
-            {
-                // lbl1.BackColor = Color.Purple;
-            }
-
-            if (conteurCouleur == 1)
-            {
-                // lbl2.BackColor = Color.Purple;
-            }
-
-            if (conteurCouleur == 2)
-            {
-                // lbl3.BackColor = Color.Purple;
-            }
-
-            if (conteurCouleur == 3)
-            {
-                // lbl4.BackColor = Color.Purple;
-            }
-
-            conteurCouleur++;
-        }
-
+        /// <summary>
+        /// Appelle les méthode permettant de : afficher le tableau de label pour les essais du joueur,
+        /// afficher le tableau de label des indices et la création aléatoire de la solution.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MastermindNormal_Load(object sender, EventArgs e)
         {
             CreationLabelEssaie(panelEssaie);
             CreationLabelIndice(panelIndice);
-            NouvelleCombinaisonAléatoire();
+            NouvelleCombinaisonAléatoire().CopyTo(copieGoal,0);
         }
 
         private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
@@ -252,6 +116,10 @@ namespace Mastermind_Graphique
             }
         }
 
+        /// <summary>
+        /// Affichage dynamique du tableau de label que remplira le joueur pour ses essaies.
+        /// </summary>
+        /// <param name="panel"></param>
         private void CreationLabelEssaie(Panel panel)
         {
             // création d'un tableau de label
@@ -267,19 +135,22 @@ namespace Mastermind_Graphique
                     // placement du label dans le tableau
                     tableauLabel[colonne, ligne] = newLabel;
 
-
                     // paramètre label
                     newLabel.BackColor = Color.Gray;
                     newLabel.Size = new Size(36, 36);
                     newLabel.Location = new Point(45 * colonne + 2, 45 * ligne +2);
-                    //newLabel.Padding = new Padding(5, 5, 5, 5);
 
                     // Ajout du label au Panel
                     panel.Controls.Add(newLabel);
+
                 }
             }
         }
 
+        /// <summary>
+        /// Affichage dynamique du tableau de label des Indices.
+        /// </summary>
+        /// <param name="panel"></param>
         private void CreationLabelIndice(Panel panel)
         {
             // création d'un tableau de label
@@ -293,11 +164,11 @@ namespace Mastermind_Graphique
                     Label newLabel = new Label();
 
                     // placement du label dans le tableau
-                    tableauLabel[colonne, ligne] = newLabel;
+                    tableauLabelIndice[colonne, ligne] = newLabel;
 
 
                     // paramètre label
-                    newLabel.BackColor = Color.White;
+                    newLabel.BackColor = Color.Gray;
                     newLabel.Size = new Size(10, 10);
                     newLabel.Location = new Point(20 * colonne + 2, 45 * ligne + 15);
 
@@ -307,6 +178,10 @@ namespace Mastermind_Graphique
             }
         }
 
+        /// <summary>
+        /// Création aléatoire de la solution. 
+        /// </summary>
+        /// <returns></returns>
         private Color[] NouvelleCombinaisonAléatoire()
         {
             
@@ -315,6 +190,7 @@ namespace Mastermind_Graphique
             // Génération d'une combinaison aléatoire de 4 couleurs
             for (int i = 0; i < nbCouleurMaxParEssaie; i++)
             {
+                // nombre tiré entre 0 et 6 compris
                 int valeurDeCouleur = random.Next(6);
                 Color color;
 
@@ -346,13 +222,17 @@ namespace Mastermind_Graphique
 
                 goal[i] = color;
             }
+            // retourne le tableau de couleur "goal"
             return goal;
         }
 
-        private void chkSolution_CheckedChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Affiche dans un tableau de label la solution
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+       private void chkSolution_CheckedChanged(object sender, EventArgs e)
         {
-            goal = NouvelleCombinaisonAléatoire();
-
             tableauLabelSolution = new Label[4];
 
             for (int ligne = 0; ligne < 4; ligne++)
@@ -371,6 +251,54 @@ namespace Mastermind_Graphique
                 // Ajout du label au Panel
                 panelSolution.Controls.Add(newLabel);
             }
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            //copieTableauLabel[conteurCouleur, positionY].BackColor = tableauLabel[].BackColor;
+
+            for (int i = 0; i < COLONES; i++)
+            {
+                if (goal[i] == tableauLabel[i,positionY].BackColor)
+                {
+                    //copieGoal[i] = Color.Transparent;
+                    //copieTableauLabel[i,positionY].BackColor = Color.Snow;
+
+                    tableauLabelIndice[bonnePosition, positionY].BackColor = Color.White;
+                    bonnePosition++;
+
+                    if (bonnePosition == 4)
+                    {
+                        MessageBox.Show("Bravo ! Vous avez gagné");
+                    }
+                }
+
+                mauvaisePosition = bonnePosition;
+            }
+
+            /*for (int i = 0; i < COLONES; i++)
+            {
+                for (int j = 0; j < copieGoal.Length; j++)
+                {
+                    if ()
+                    {
+
+                    }
+                }
+            }*/
+
+            positionY++;
+            conteurCouleur = 0;
+            bonnePosition = 0;
+            //conteurEssaie++;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            conteurCouleur--;
+            tableauLabel[conteurCouleur, positionY].BackColor = Color.Gray;
+            // changer les couleurs des labels de l'essaie en cours en gris
+            
         }
     }
 }
